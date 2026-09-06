@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="screen1" class="screen active">
+        <h1>I have something for you...</h1>
+        <div class="gift-box" onclick="nextScreen(1)">🎁</div>
+        <p>Tap the gift to open!</p>
+    </div>
+
+    <div id="screen2" class="screen">
+        <h1>Happy Birthday, [Friend's Name]! 🎉</h1>
+        <p>Welcome to your special day.</p>
+        <button class="btn" onclick="nextScreen(2)">See What's Next</button>
+    </div>
+
+    <div id="screen3" class="screen">
+        <h2>Make a Wish!</h2>
+        
+        <div class="cake-container">
+            <div class="flame" id="flame"></div>
+            <div class="candle"></div>
+            <div class="cake" id="cake">
+                <div class="cake-half left"></div>
+                <div class="cake-half right"></div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button class="btn" id="lightBtn" onclick="lightCandle()">Light the Candle</button>
+            <button class="btn hidden" id="cutBtn" onclick="cutCake()">Cut the Cake</button>
+        </div>
+
+        <div id="bdayPopup" class="popup hidden">
+            <h2>Happy Birthday [Friend's Name]!! 🎂🎈</h2>
+        </div>
+    </div>
+
+    <div id="screen4" class="screen">
+        <h2>My Wishes For You</h2>
+        <div class="wishes">
+            <p>✨ May all your dreams come true.</p>
+            <p>✨ Wishing you endless happiness and success.</p>
+            <p>✨ Cheers to another year of amazing memories!</p>
+            <p>✨ Never stop being your amazing self.</p>
+        </div>
+        <button class="btn" onclick="showFinalPopup()">Click Me</button>
+    </div>
+
+    <div id="finalPopup" class="overlay hidden">
+        <div class="popup-box">
+            <h2>Thank you so much! ❤️</h2>
+            <p>For being the absolute best friend ever.</p>
+        </div>
+    </div>
+
+    <div id="balloon-container"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
